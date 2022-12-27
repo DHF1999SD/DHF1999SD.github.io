@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>（系统安装系列2）把U盘制作成PE系统启动U盘的方法 | 点点的雨</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://www.dddy.eu.org/favicon.ico?v=1669526224574">
+<link rel="stylesheet" href="https://www.dddy.eu.org/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="把PE系统装进U盘可以有很多实用的功能，U盘既可以当做存储文件的工具使用，又可以开机进入U盘里的PE系统维护电脑使用，PE系统启动U盘最常用的功能就是用来装系统，可以装原版也可以装各种ghost版本。
+Windows PE系统是一种系统预装..." />
+    <meta name="keywords" content="U盘PE,启动U盘" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://www.dddy.eu.org">
+        <img src="https://www.dddy.eu.org/images/avatar.png?v=1669526224574" class="site-logo">
+        <h1 class="site-title">点点的雨</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      www.dddy.eu.org
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://www.dddy.eu.org/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">（系统安装系列2）把U盘制作成PE系统启动U盘的方法</h2>
+            <div class="post-date">2022-06-13</div>
+            
+            <div class="post-content" v-pre>
+              <p>把PE系统装进U盘可以有很多实用的功能，U盘既可以当做存储文件的工具使用，又可以开机进入U盘里的PE系统维护电脑使用，PE系统启动U盘最常用的功能就是用来装系统，可以装原版也可以装各种ghost版本。</p>
+<p>Windows PE系统是一种系统预装环境和工具。现在主要有2003pe、win7pe、win8pe、win10pe，一般一个制作工具里都会集成两个或两个以上，以适应不用硬件的需求，PE其实就是一个精简版的Windows系统，只保留了最基本的功能并添加了一些实用的工具，例如可以给系统备份，在忘记Windows登录密码时可以进入PE系统清除Windows密码，给硬盘分区，系统坏了没法进入系统时可以进入PE里把放在桌面的重要文件导出来，还能够检测硬件信息等等。</p>
+<p>好多人不喜欢用U盘PE来装系统，是因为有些U盘PE制作工具会偷偷的给电脑安装一些并不需要的软件，更改甚至锁定IE主页等行为，这里推荐两个比较好的制作工具，微PE工具箱和IT天空的优启通，微PE是目前大家公认的最干净的制作工具，没捆绑，不改主页。优启通虽然有推广软件和更改主页，但可以关掉，即使不小心更改了主页也不锁定，之后可以自己按需要更改，而且官网论坛很活跃，有问题可以去论坛交流。</p>
+<p>首先要准备一个8G以上的U盘，一般还要放几个系统，越大越好。制作前U盘里不要放重要的文件，制作时U盘会被格式化。</p>
+<p>微PE的下载和使用：百度搜索“微pe工具箱”，找到下图这个，一定要注意网址对不对，现在有好多假冒的。</p>
+<p>微PE工具箱的网址是：http://www.wepe.com.cn<br>
+<img src="https://www.dddy.eu.org/post-images/1655120907176.jpg" alt="" loading="lazy"><br>
+进到网站里面下载最新的版本即可，如果当前用的电脑是32位的系统就下载32位的，64位的就下载64位的，下载后可以直接打开（不需要安装），选择“安装PE到U盘选项”。<br>
+<img src="https://www.dddy.eu.org/post-images/1655120933162.jpg" alt="" loading="lazy"><br>
+安装方法一般默认即可。</p>
+<p>待写入U盘显示的是已经插在电脑上的U盘，如果电脑插了两个以上的U盘，可以选择需要制作的那个，如果什么显示都没有，就点一下右边那个刷新按钮。</p>
+<p>格式化可以选择exFAT或NTFS，这两种文件格式都支持4G以上的大文件存储。</p>
+<p>卷标随意，这个即使制作好之后也可以随意改。</p>
+<p>壁纸可以自己设定，如果不改就会显示默认壁纸。</p>
+<p>下面的（仅legacy启动可用）说的是只有传统BIOS启动方式才可以用，新的uefi启动不能用，现在大多数新电脑默认都是uefi启动，如果不需要DOS工具箱还是不勾选的好。</p>
+<p>所有选好之后点击“立即安装进U盘”，等待制作完成即可。<br>
+<img src="https://www.dddy.eu.org/post-images/1655120963627.jpg" alt="" loading="lazy"></p>
+<p>关于优启通可以直接百度搜索“IT天空”，找到IT天空官网，到里面下载最新版本。</p>
+<p>IT天空网址：https://www.itsk.com<br>
+<img src="https://www.dddy.eu.org/post-images/1655120987741.jpg" alt="" loading="lazy"><br>
+下载好之后也不用安装，可以直接打开，首先选择“U盘模式”，选择磁盘那里选择需要制作的U盘，其它都默认即可，壁纸也可以自己设定。之后点击“全新制作”就开始制作了。</p>
+<p>还原空间的作用是，制作好之后又不想用了，可以把U盘还原成原来的样子。</p>
+<p>免格升级的作用是，当优启通有新版本了，用这个选项可以直接升级，U盘不会被格式化，不影响里面存储的文件。<br>
+<img src="https://www.dddy.eu.org/post-images/1655121010885.jpg" alt="" loading="lazy"><br>
+制作好之后就可以把电脑BIOS里设置成U盘为第一启动项，或开机按选择启动盘的快捷键，选择U盘，这样开机就能进入到U盘里的PE系统了。不同品牌主板的快捷键都不一样，需要根据自己电脑或主板的品牌搜一下。</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://www.dddy.eu.org/tag/upanpe/" class="tag">
+                    U盘PE
+                  </a>
+                
+                  <a href="https://www.dddy.eu.org/tag/qdup/" class="tag">
+                    启动U盘
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://www.dddy.eu.org/post/1/">
+                  <h3 class="post-title">
+                    （系统安装系列1）原版Windows系统（Win7、Win10、Win11等）下载的方法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

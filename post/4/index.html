@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>（系统安装系列4）用U盘PE安装WINDOWS原版系统的方法和硬件驱动的安装方法 | 点点的雨</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://www.dddy.eu.org/favicon.ico?v=1669526224574">
+<link rel="stylesheet" href="https://www.dddy.eu.org/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="1、系统的安装，要提前把下载好的原版系统放到U盘里，建议放到根目录，减少出错的可能。进电脑BIOS，把U盘设置成第一启动顺序，或开机按选择启动盘的快捷键选择U盘，开机进入U盘里的PE系统，找到放在U盘里的原版系统，点鼠标右键，选择“装载”后..." />
+    <meta name="keywords" content="系统安装" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://www.dddy.eu.org">
+        <img src="https://www.dddy.eu.org/images/avatar.png?v=1669526224574" class="site-logo">
+        <h1 class="site-title">点点的雨</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      www.dddy.eu.org
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://www.dddy.eu.org/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">（系统安装系列4）用U盘PE安装WINDOWS原版系统的方法和硬件驱动的安装方法</h2>
+            <div class="post-date">2022-07-05</div>
+            
+            <div class="post-content" v-pre>
+              <p>1、系统的安装，要提前把下载好的原版系统放到U盘里，建议放到根目录，减少出错的可能。进电脑BIOS，把U盘设置成第一启动顺序，或开机按选择启动盘的快捷键选择U盘，开机进入U盘里的PE系统，找到放在U盘里的原版系统，点鼠标右键，选择“装载”后就可以看到下面这些文件，双击exe开始安装系统。<br>
+<img src="https://www.dddy.eu.org/post-images/1657020363270.jpg" alt="" loading="lazy"><br>
+<img src="https://www.dddy.eu.org/post-images/1657020369176.jpg" alt="" loading="lazy"><br>
+这里演示的是Win7系统，Win10基本也类似，安装过程一般的选项按照提示即可，到了选择安装位置时一定要注意一下，要选择“自定义”选项。<br>
+<img src="https://www.dddy.eu.org/post-images/1657020401204.jpg" alt="" loading="lazy"><br>
+<img src="https://www.dddy.eu.org/post-images/1657020408059.jpg" alt="" loading="lazy"><br>
+<img src="https://www.dddy.eu.org/post-images/1657020415652.jpg" alt="" loading="lazy"><br>
+之后根据硬盘分区时候的不同盘的大小选择C盘，也就是主分区的那个盘。如果之前硬盘没有分区也可以在这里进行分区，选择“驱动器选项（高级）”，不过在这里分区如果是MBR会多出一个100M的空间，这个不用管，装完系统后并不会显示。<br>
+<img src="https://www.dddy.eu.org/post-images/1657020441137.jpg" alt="" loading="lazy"><br>
+之后等待安装完成即可，期间会自动重启，最好在第一次重启黑屏的那一瞬间迅速的拔掉U盘，否则重启之后还会进入PE系统，正常的系统安装就不能继续了。如果没有及时拔掉U盘也不用着急，重启再次进入了PE，那就在PE里面关机，然后拔掉U盘再开机，系统就会继续安装了。<br>
+<img src="https://www.dddy.eu.org/post-images/1657020466373.jpg" alt="" loading="lazy"><br>
+最后设置用户名那里可以随便填，最好是英文字母，安装完成之后桌面上只有一个回收站的图标就对了，说明就是原版的系统。</p>
+<p>安装完之后鼠标在桌面上右键-个性化-更改桌面图标，可以把其它的常用桌面图标调出来。</p>
+<p>经验总结：我个人装系统的时候是把BIOS里的启动顺序设置为硬盘为第一启动，USB设置为第二启动，然后进PE的时候用的是用选择启动项的快捷键，再选择U盘启动，这样系统安装过程中自动重启就不用拔U盘了，重启之后就自动从硬盘启动了，不用总是一直盯着。</p>
+<p>注意：原版的Win7系统里是没有USB3.0和NVMe协议固态硬盘补丁的，没有补丁即使有驱动也打不上的，带有USB3.0接口的电脑要装Win7最简单的办法还是找一个集成补丁和驱动的ghost系统比较好。</p>
+<p>2、驱动的安装，原版系统里自带的驱动比较少，一般只能够保证电脑的正常开机，安装完系统首先就要把所有驱动程序安装或更新一遍。</p>
+<p>安装驱动最好的方法就是根据自己电脑的品牌或是各个硬件的品牌去官网下载，这样安装的驱动最干净，不会一不小心安装了其它不需要的软件或更改了浏览器的主页，不过就是太麻烦了。</p>
+<p>还可以用驱动精灵、驱动人生等在线安装和更新驱动的工具，大部分工具都有万能网卡版，即使刚装完的系统不能联网也可以用。</p>
+<p>如果电脑没有联网的环境，可以用IT天空的万能驱动助理或系统总裁的驱动总裁等离线驱动安装工具，但是由于集成的驱动比较多，安装包比较大。</p>
+<p>使用工具安装最大的缺点就是如果不够小心非常有可能默认安装一些不需要的软件或是更改了浏览器主页，甚至有些还会锁定主页，正常途径根本改不了。</p>
+<p>3、到此Windows原版系统的安装算是完成了。</p>
+<p>关于系统激活与正版、盗版的一些说明，原版系统安装完是没有激活的，如果需要激活系统建议通过正规渠道购买正版密钥，其实不管是安装的原版还是ghost版只要是通过正规渠道购买秘钥激活那就是正版，用一些购物平台买的几块钱的秘钥或是使用激活工具其实都是盗版，没有激活的系统大部分功能也可以用，激活工具最好不要乱用，其实有些工具本来是好的，但是有的被人改过之后又放到了网上，这样的工具除了会激活系统之外还会默默的干一些其他的事情，最后还是建议支持正版。</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://www.dddy.eu.org/tag/xtaz/" class="tag">
+                    系统安装
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://www.dddy.eu.org/post/3/">
+                  <h3 class="post-title">
+                    （系统安装系列3）用PE系统U盘给硬盘分区的方法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

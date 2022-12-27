@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>（系统安装系列3）用PE系统U盘给硬盘分区的方法 | 点点的雨</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://www.dddy.eu.org/favicon.ico?v=1669526224574">
+<link rel="stylesheet" href="https://www.dddy.eu.org/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="这里介绍一下电脑不同启动模式下给硬盘分区的方法，传统BIOS（Legacy）和UEFI模式启动时给硬盘分区的区别和注意事项。
+1、对硬盘进行分区针可以有效的防止重装系统之后重要文件丢失的情况出现，可以不同的盘放不同的文档，方便文档的管理，当..." />
+    <meta name="keywords" content="硬盘分区" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://www.dddy.eu.org">
+        <img src="https://www.dddy.eu.org/images/avatar.png?v=1669526224574" class="site-logo">
+        <h1 class="site-title">点点的雨</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      www.dddy.eu.org
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://www.dddy.eu.org/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">（系统安装系列3）用PE系统U盘给硬盘分区的方法</h2>
+            <div class="post-date">2022-07-05</div>
+            
+            <div class="post-content" v-pre>
+              <p>这里介绍一下电脑不同启动模式下给硬盘分区的方法，传统BIOS（Legacy）和UEFI模式启动时给硬盘分区的区别和注意事项。</p>
+<p>1、对硬盘进行分区针可以有效的防止重装系统之后重要文件丢失的情况出现，可以不同的盘放不同的文档，方便文档的管理，当然如果电脑有两块以上的硬盘，其中一块盘只装系统和软件也可以不分区的。</p>
+<p>如果是新组装的电脑分区之前首先要进BIOS看一下或更改一下电脑的启动模式（笔记本和品牌机一般都自带系统，这种情况需要进系统之后在系统里进行分区，本篇文章说的是在U盘PE里给硬盘分区）。开机马上连续不停的按相应的快捷键即可进入BIOS，不同品牌电脑和主板的快捷键不一样，一般都是F1到F12、Esc、Del其中的一个键，有的笔记本可能要配合Fn键，有的开机的时候在屏幕上会显示一两秒的提示，有的一点也不显示。需要根据自己电脑的品牌或主板的品牌去搜索一下（例如可以搜XX主板进BIOS快捷键）。</p>
+<p>进入BIOS之后看一下启动模式是UEFI还是传统BIOS（Legacy），是否开启了CSM，现在新电脑一般默认开启的是UEFI模式引导，太老的电脑里根本没有UEFI的选项，那就是传统BIOS。</p>
+<p>UEFI启动对应的硬盘分区表类型为GPT（GUID）。</p>
+<p>UEFI+Legacy就是兼容模式，对应的硬盘分区表类型可以是GPT也可以是MBR。</p>
+<p>开启CSM就是开启兼容模式，可以是GPT也可以是MBR。开启兼容模式需要关闭安全启动（Secure Boot）。</p>
+<p>老电脑里根本找不到UEFI的选项，那就是传统BIOS（Legacy）对应MBR。</p>
+<p>不同品牌主板BIOS里这几个选项的位置都不一样，总之要找到这几个关键字母就行了。</p>
+<p>例如微星的主板是按Del进入BIOS<br>
+<img src="https://www.dddy.eu.org/post-images/1657019939156.jpg" alt="" loading="lazy"><br>
+<img src="https://www.dddy.eu.org/post-images/1657019946358.jpg" alt="" loading="lazy"><br>
+如何选择：</p>
+<p>如果装系统的整个硬盘小于等于2T可以任意选择，如果大于2T需要选择UEFI+GPT的方式，因为MBR分区表最多只能支持2T多一点。</p>
+<p>如果装Win10系统选哪个方式都可以。</p>
+<p>如果装Win7系统建议选择兼容模式+MBR的方式。用UEFI+GPT也可以，但是太麻烦了。</p>
+<p>目前绝大多数主板UEFI启动只支持64位的系统。</p>
+<p>2、把PE系统启动U盘插在电脑上，台式机一般插在机箱后面的插口，可以减少出错的几率。进入U盘里的PE系统有两种方法，一种方法是进BIOS设置U盘为第一启动项，一般是USB HDD或USB HARD DISK，设置好按F10保存之后重启自动进入U盘里的PE系统。第二种方法是开机时不停的按选择启动盘的热键，这个快捷键也是不同品牌的电脑或主板都不一样，需要根据自己电脑或主板的品牌搜索一下（例如XX主板U盘启动热键）。</p>
+<p>例如微星主板是开机按F11进入选择启动盘的界面，下图第一个是硬盘启动，第二个和第三个都是UEFI模式启动的金士顿的U盘，不同品牌的U盘显示的不一样，实测第二个不能启动，第三个可以顺利进入PE。一般PE工具制作的启动U盘里都至少有两个以上的PE版本，如果不是太老的电脑就选Win10PE就可以了，防止不能识别一些硬件。<br>
+<img src="https://www.dddy.eu.org/post-images/1657019970500.jpg" alt="" loading="lazy"><br>
+3、进入PE之后就要给硬盘分区了，一般PE系统里都有一个 DiskGenius 硬盘分区工具，打开此工具首先检查一下硬盘分区格式是MBR还是GPT，如果电脑是传统BIOS启动则对应MBR，如果是UEFI启动则对应GPT，下图是在虚拟机里演示的，就选了默认的MBR。<br>
+<img src="https://www.dddy.eu.org/post-images/1657020002882.jpg" alt="" loading="lazy"><br>
+如果电脑是UEFI启动的就要改一下，右键左边硬盘那里，选择“转换分区类型为GUID格式”。<br>
+<img src="https://www.dddy.eu.org/post-images/1657020030551.jpg" alt="" loading="lazy"><br>
+然后选择“快速分区”，根据硬盘大小和需要来分就可以了，如果是固态硬盘一定要4K对齐，勾选“对齐分区到此扇区数的整数倍”，默认的就可以。<br>
+<img src="https://www.dddy.eu.org/post-images/1657020060628.jpg" alt="" loading="lazy"><br>
+GPT（GUID）分区一定要创建ESP分区，大小默认即可，ESP分区是用来放系统引导文件的，MSR分区虽然目前没什么用，但是还是一起创建比较好。保留空闲扇区那里可选也可以不选。<br>
+<img src="https://www.dddy.eu.org/post-images/1657020083503.jpg" alt="" loading="lazy"><br>
+硬盘分区完成之后就可以正式装系统了。</p>
+<p>总结：传统BIOS（Legacy）对应的是MBR，系统引导文件和系统在一个分区。</p>
+<p>UEFI对应的是GPT（GUID），系统引导文件在ESP分区。</p>
+<p>开启CMS兼容模式都可以。</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://www.dddy.eu.org/tag/ypfq/" class="tag">
+                    硬盘分区
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://www.dddy.eu.org/post/2/">
+                  <h3 class="post-title">
+                    （系统安装系列2）把U盘制作成PE系统启动U盘的方法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

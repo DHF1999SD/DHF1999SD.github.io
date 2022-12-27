@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>（系统安装系列5）用微PE工具箱安装GHOST系统的方法以及安装失败的解决方法 | 点点的雨</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://www.dddy.eu.org/favicon.ico?v=1669526224574">
+<link rel="stylesheet" href="https://www.dddy.eu.org/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="ghost系统是由原版系统封装之后得来的，是为了批量维护电脑而发明的一种技术，目的是为了减少不必要的重复劳动，ghost系统里面一般都提前更新了补丁，集成了驱动安装包，安装了必要的运行库和软件，提前对系统做了相应的优化设置，安装过程完全自动..." />
+    <meta name="keywords" content="系统安装" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://www.dddy.eu.org">
+        <img src="https://www.dddy.eu.org/images/avatar.png?v=1669526224574" class="site-logo">
+        <h1 class="site-title">点点的雨</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      www.dddy.eu.org
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://www.dddy.eu.org/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">（系统安装系列5）用微PE工具箱安装GHOST系统的方法以及安装失败的解决方法</h2>
+            <div class="post-date">2022-07-05</div>
+            
+            <div class="post-content" v-pre>
+              <p>ghost系统是由原版系统封装之后得来的，是为了批量维护电脑而发明的一种技术，目的是为了减少不必要的重复劳动，ghost系统里面一般都提前更新了补丁，集成了驱动安装包，安装了必要的运行库和软件，提前对系统做了相应的优化设置，安装过程完全自动，不像安装原版系统那样还需要手动选择，用ghost系统能够提高计算机维护的效率。</p>
+<p>1、 首先开机进入U盘里的微PE系统。打开（CGI备份还原）。不同的PE里面的工具名称不一样，一般的PE工具里都会有一个类似这种功能的软件，这里是用微PE工具箱做的演示。<br>
+<img src="https://www.dddy.eu.org/post-images/1657020790856.jpg" alt="" loading="lazy"><br>
+2、安装ghost系统其实就是还原系统，选择还原分区。下面选择系统盘，一般都是C盘，不过有的时候PE里盘符不一定对，最好根据大小选择。再下面选择映像文件，一般格式有gho、wim、esd等，可以是放到U盘里的也可以是放到C盘以外的电脑硬盘里的。然后点击（执行）。<br>
+<img src="https://www.dddy.eu.org/post-images/1657020817077.jpg" alt="" loading="lazy"><br>
+3、下一步，可以什么都不选，等系统还原完手动重启或关机，也可以根据需要选择，如果U盘是第一启动顺序，就选择关机，关机之后拔掉U盘再开机就直接从硬盘启动了，就不用总是盯着电脑要在重启的一瞬间拔掉U盘了。如果硬盘是第一启动顺序，可以选择重启，还原完系统后就什么都不用管了，拔不拔U盘都无所谓，不过最好是拔掉，防止系统部署的时候有错误的硬件识别。<br>
+<img src="https://www.dddy.eu.org/post-images/1657020865478.jpg" alt="" loading="lazy"><br>
+4、之后就等待系统还原完成，重启或再次开机后会自动部署系统。<br>
+<img src="https://www.dddy.eu.org/post-images/1657020884237.jpg" alt="" loading="lazy"><br>
+5、用ghost系统有的时候安装完却进不去系统，一般都是由引导文件错误引起的，安装原版系统一般不会出现这个问题。常见于UEFI引导的电脑，因为GPT硬盘的引导文件并不是放在系统盘（C盘）里，传统引导（Legacy）MBR硬盘如果出现这个情况一般是因为封装ghost系统时没有把引导文件一起封装进去。</p>
+<p>解决方法就是重建引导，如果系统安装完却进不去就再次进入U盘PE，找到修复引导的工具。<br>
+<img src="https://www.dddy.eu.org/post-images/1657020908585.jpg" alt="" loading="lazy"><br>
+根据实际情况选择，传统BIOS+MBR硬盘就选Legacy，UEFI+GPT硬盘就选UEFI，一般软件都会自动判断的，修复完成之后再重启一般就没问题了。<br>
+<img src="https://www.dddy.eu.org/post-images/1657020930203.jpg" alt="" loading="lazy"></p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://www.dddy.eu.org/tag/xtaz/" class="tag">
+                    系统安装
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://www.dddy.eu.org/post/4/">
+                  <h3 class="post-title">
+                    （系统安装系列4）用U盘PE安装WINDOWS原版系统的方法和硬件驱动的安装方法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
