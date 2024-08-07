@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Linuxptp实现"
+title: "Linuxptp"
 date:   2024-8-8
 tags: [technology]
 comments: true
