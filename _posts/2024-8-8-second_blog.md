@@ -2,7 +2,7 @@
 layout: post
 title: "ATS原理"
 date:   2024-8-7
-tags: [Technology]
+tags: [Concept]
 comments: true
 author: DHF1999SD
 ---
