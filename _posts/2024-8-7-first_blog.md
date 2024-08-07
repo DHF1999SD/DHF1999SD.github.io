@@ -41,8 +41,8 @@ SOF_TIMESTAMPING_RX_HARDWARE
     sudo make install
 
 ## 使用方法
-
 终端输入，查看使用命令
+
     ptp4l -h    
 
 # 程序运行
