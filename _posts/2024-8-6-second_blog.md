@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "我的第2个博客"
-date:   2024-8-6
-tags: [nm]
+title: "Linuxptp实现"
+date:   2024-8-8
+tags: [technology]
 comments: true
 author: DHF1999SD
 ---
 
-我试试
+# 测试一下
 
 <!-- more -->
 
