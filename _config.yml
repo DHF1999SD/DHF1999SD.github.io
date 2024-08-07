@@ -18,13 +18,13 @@ excerpt_separator: <!-- more -->
 
 footer-links:
   email: dahaungfeng1999@qq.com
-  github: 
+  github: https://dhf1999sd.github.io/
   rss: # just type anything here for a working RSS icon
 
 
 footer-text: Copyright (c) 2024 DHF1999SD
 
-url: https://dhf1999sd.github.io/
+url: 
 
 permalink: /:title/
 paginate_path: /page:num/
