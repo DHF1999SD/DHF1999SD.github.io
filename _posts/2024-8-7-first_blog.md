@@ -8,7 +8,7 @@ author: DHF1999SD
 ---
 
 <!-- more -->
-# PTP的概念
+## PTP的概念
 PTP域中的节点称为时钟节点，PTP协议定义了以下三种类型的基本时钟节点：
 OC（Ordinary Clock，普通时钟）：只有一个PTP通信端口的时钟是普通时钟。
 BC（Boundary Clock，边界时钟）：有一个以上PTP通信端口的时钟。
@@ -18,8 +18,8 @@ P2PTC（Peer-to-PeerTransparent Clock，点到点透明时钟）：只直接转�
 一般链式的P2P网络选择E2E-TC，而从钟节点较多的网络考虑P2P-TC。因在 P2P 延时测量机制中，延时报文交互是在每条链路的两个端口间进行的，主钟只与直接相连的网络交换设备有延时报文交互，因此在 P2P TC 的延时测量机制中，没有对从钟数量的限制。
 主时钟：一个PTP通信子网中只能有一个主时钟。
 
-# 检测网卡是否支持
-## 查看网卡是否支持软硬件时间戳
+## 检测网卡是否支持
+### 查看网卡是否支持软硬件时间戳
 终端输入命令
 
     sudo ethtool -T eth0
@@ -36,33 +36,33 @@ P2PTC（Peer-to-PeerTransparent Clock，点到点透明时钟）：只直接转�
     SOF_TIMESTAMPING_TX_HARDWARE
     SOF_TIMESTAMPING_RX_HARDWARE
 
-# LinuxPTP下载
-## 下载命令
+## LinuxPTP
+### 下载命令
     sudo git clone git://git.code.sf.net/p/linuxptp/code linuxptp
     cd linuxptp
     sudo make
     sudo make install
 
-## 使用方法
+### 使用方法
 终端输入命令，查看使用方式
 
     ptp4l -h    
 
-# 程序运行
+## 程序运行
 
-## 软件时间戳，主从模式测试
+### 软件时间戳，主从模式测试
 
 服务端（主钟）：
     sudo ptp4l -i enp0s31f6 -m -S (网卡名按照对应连接的实际网卡名进行修改)
 客户端（从钟）：
     sudo ptp4l -i eno1 -m -S -s  (网卡名按照对应连接的实际网卡名进行修改)
 
-## 硬件件时间戳，主从模式测试
+### 硬件件时间戳，主从模式测试
 
 服务端（主钟）：
 
     sudo ptp4l -i enp0s31f6 -m -H   （区别在-H）
-    
+
 客户端（从钟）：
 
     sudo ptp4l -i eno1 -m -H -s
