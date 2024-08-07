@@ -11,6 +11,8 @@ author: DHF1999SD
 
 <!-- more -->
 
+    sudo apt-get install linuxptp
+
 
 
 嘿嘿
