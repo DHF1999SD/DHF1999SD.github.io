@@ -49,10 +49,14 @@ SOF_TIMESTAMPING_RX_HARDWARE
 
 ## 软件时间戳，主从模式测试
 
-服务端（主钟）：sudo ptp4l -i enp0s31f6 -m -S (网卡名按照对应连接的实际网卡名进行修改)
-客户端（从钟）：sudo ptp4l -i eno1 -m -S -s  (网卡名按照对应连接的实际网卡名进行修改)
+服务端（主钟）：
+    sudo ptp4l -i enp0s31f6 -m -S (网卡名按照对应连接的实际网卡名进行修改)
+客户端（从钟）：
+    sudo ptp4l -i eno1 -m -S -s  (网卡名按照对应连接的实际网卡名进行修改)
 
 ## 硬件件时间戳，主从模式测试
 
-服务端（主钟）：sudo ptp4l -i enp0s31f6 -m -H   （区别在-H）
-客户端（从钟）：sudo ptp4l -i eno1 -m -H -s
+服务端（主钟）：
+    sudo ptp4l -i enp0s31f6 -m -H   （区别在-H）
+客户端（从钟）：
+    sudo ptp4l -i eno1 -m -H -s
