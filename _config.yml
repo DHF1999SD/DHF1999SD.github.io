@@ -1,8 +1,8 @@
-name: "Pianfan's blog"
-description: "翩帆的个人技术博客"
+name: "Dhf1999sd's blog"
+description: "大黄蜂的个人技术博客"
 
-avatar: https://pianfan.github.io/images/avatar.png
-favicon: https://pianfan.github.io/images/favicon.ico
+avatar: https://dhf1999sd.github.io/images/avatar.png
+favicon: https://dhf1999sd.github.io/images/favicon.ico
 
 navigation:
   - name: 首页
@@ -17,17 +17,14 @@ paginate: 8
 excerpt_separator: <!-- more -->
 
 footer-links:
-  zhihu: 
-  email: xiongyunhan@outlook.com
-  facebook:
-  github: pianfan
+  email: dahaungfeng1999@qq.com
+  github: https://dhf1999sd.github.io/
   rss: # just type anything here for a working RSS icon
-  twitter: 
-  youtube:
 
-footer-text: Copyright (c) 2024 Pianfan
 
-url: https://pianfan.github.io
+footer-text: Copyright (c) 2024 DHF1999SD
+
+url: https://dhf1999sd.github.io/
 
 permalink: /:title/
 paginate_path: /page:num/
