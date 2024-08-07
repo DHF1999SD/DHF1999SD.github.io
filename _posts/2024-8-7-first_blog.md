@@ -11,4 +11,8 @@ author: DHF1999SD
 # PTP的概念
     sudo apt-get install linuxptp
 
+# 检测网卡是否支持
+## 查看网卡是否支持软硬件时间戳
 
+    sudo ethtool -T eth0
+    
