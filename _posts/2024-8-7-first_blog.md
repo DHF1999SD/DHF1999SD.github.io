@@ -62,6 +62,7 @@ P2PTC（Peer-to-PeerTransparent Clock，点到点透明时钟）：只直接转�
 服务端（主钟）：
 
     sudo ptp4l -i enp0s31f6 -m -H   （区别在-H）
+    
 客户端（从钟）：
 
     sudo ptp4l -i eno1 -m -H -s
