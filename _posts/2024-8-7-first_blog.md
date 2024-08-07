@@ -2,7 +2,7 @@
 layout: post
 title: "关于我自己"
 date:   2024-8-7
-tags: [nn]
+tags: [About]
 comments: true
 author: DHF1999SD
 ---
