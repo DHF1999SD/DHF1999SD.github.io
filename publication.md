@@ -4,8 +4,6 @@ title: Publication
 permalink: /publication/
 ---
 
-谷歌学术主页：https://scholar.google.com/citations?user=2XCLe8IAAAAJ&hl=en
-
 ## 会议论文
 
 **2023**
