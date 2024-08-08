@@ -8,13 +8,13 @@ permalink: /publication/
 
 ### 2023
 
- #### Dynamic Per-Flow Queues for TSN Switches
+ * Dynamic Per-Flow Queues for TSN Switches
 
  Wenxue Wu, Zhen Li, Tong Zhang, Xiaoqin Feng, Liwei Zhang, Xuelong Qi, Fenyuan Ren
- 
+
  IEEE DATE 2024
 
- Fault-Tolerant Cyclic Queuing and Forwarding in Time-Sensitive Networking
+ * Fault-Tolerant Cyclic Queuing and Forwarding in Time-Sensitive Networking
 
  Liwei Zhang, Tong Zhang, Wenxue Wu, Xiaoqin Feng, Guoxi Lin, Fenyuan Ren
 
