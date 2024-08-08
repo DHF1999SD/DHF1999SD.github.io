@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Publication
+tags: [Publication]
 permalink: /publication/
 ---
 
