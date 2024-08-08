@@ -18,7 +18,7 @@ permalink: /publication/
 
    Liwei Zhang, Tong Zhang, <u>Wenxue Wu<u>, Xiaoqin Feng, Guoxi Lin, Fenyuan Ren
 
-  IEEE DATE 2024
+    IEEE DATE 2024
 
 ## 期刊论文
 
