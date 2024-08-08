@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Publication
-permalink: /Publication/
+title: publication
+permalink: /publication/
 ---
 
 ## 关于我
