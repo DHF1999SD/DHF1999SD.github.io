@@ -8,13 +8,15 @@ permalink: /publication/
 
 **2023**
 
-+ **Dynamic Per-Flow Queues for TSN Switches**
++ __Dynamic Per-Flow Queues for TSN Switches__
 
   <u>Wenxue Wu</u>, Zhen Li, Tong Zhang, Xiaoqin Feng, Liwei Zhang, Xuelong Qi, Fenyuan Ren
 
   IEEE DATE 2024
+![alt 属性文本](https://dhf1999sd.github.io/images/ppt.png "ppt")
+![RUNOOB 图标](https://static.jyshare.com/images/runoob-logo.png "RUNOOB")
 
-+ **Fault-Tolerant Cyclic Queuing and Forwarding in Time-Sensitive Networking**
++ __Fault-Tolerant Cyclic Queuing and Forwarding in Time-Sensitive Networking__
 
    Liwei Zhang, Tong Zhang, <u>Wenxue Wu</u>, Xiaoqin Feng, Guoxi Lin, Fenyuan Ren
 
