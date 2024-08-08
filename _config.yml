@@ -12,7 +12,7 @@ navigation:
   - name: 分类
     url: /tags
   - name: 论文
-    url: /
+    url: /publication
 
 paginate: 8
 
